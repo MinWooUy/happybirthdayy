@@ -4,6 +4,10 @@
 }
 
 body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Chiều cao đầy đủ */
+  margin: 0;
   line-height: 1.4;
   font-size: 20px;
   font-family: sans-serif;
@@ -217,4 +221,26 @@ h2 {
   border-radius: 5px;
   z-index: -1;
   opacity: 0.8;
+}
+
+/* Cho màn hình nhỏ như điện thoại */
+@media screen and (max-width: 768px) {
+  .container {
+    position: relative;
+    top: 20px;
+    right: auto;
+    left: auto;
+    width: 90%; /* Đặt chiều rộng theo tỷ lệ phần trăm */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+}
+
+/* Cho màn hình rất nhỏ như điện thoại di động */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 5px;
+  }
 }
