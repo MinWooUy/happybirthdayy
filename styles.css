@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.4;
+  font-size: 20px;
+  font-family: sans-serif;
+  border-top: 10px solid #58d2a5;
+  position: relatve;
+}
+
+h3 {
+  padding-bottom: 30px;
+  font-size: 30px;
+  color: #444;
+}
+
+.header {
+  margin: 0 auto;
+}
+
+.header-content {
+  background-color: #58d2a5;
+  padding: 10px 40px;
+}
+
+.cake {
+  position: relative;
+  padding: 10px 10px;
+  margin: 20px 20px;
+  text-align: center;
+}
+
+.button-letter {
+  font-size: 20px;
+  position: absolute;
+  background-color: #58d2a5;
+  color: #fff;
+  top: 650px;
+  left: 700px;
+  padding: 10px 50px;
+  border: 4px solid #348b5d;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.button-letter:hover {
+  cursor: auto;
+  background: linear-gradient(45deg, #07bd7d, #a9f0cc);
+  border: 4px solid #fff;
+  border-radius: 20px;
+  top: 645px;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 4rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 2rem rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 3;
+}
+.container {
+  position: absolute;
+  background: #fff;
+  top: 100px;
+  right: 500px;
+  padding: 20px 20px;
+  border: 5px solid #58d2a5;
+  border-radius: 10px;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 10px;
+  width: 500px;
+  z-index: 4;
+  /* margin: 0 auto; */
+  /* visibility: hidden; */
+}
+.header-content::before {
+  content: "10-11-2005";
+  font-weight: bold;
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  padding: 5px 10px;
+  color: red;
+  top: 30px;
+  left: 100px;
+  position: absolute;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #ffd700, #ff6ec4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 128, 128, 0.6);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+      0 0 10px rgba(255, 128, 128, 0.6);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 128, 128, 0.8);
+  }
+}
+
+/* h1,
+h2 {
+  font-family: "Great Vibes", cursive;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 2px; Khoảng cách giữa các ký tự
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); Đổ bóng chữ
+  background: linear-gradient(45deg, #62e795, #1098ad); Gradient màu
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  Chỉ giữ màu gradient 
+  animation: glow 2s ease-in-out infinite alternate; Hiệu ứng phát sáng
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 128, 128, 0.6);
+} */
+
+/* @keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+      0 0 10px rgba(255, 128, 128, 0.6);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 128, 128, 0.8);
+  }
+} */
+
+/* h1,
+h2 {
+  font-family: "Great Vibes", cursive;
+  color: #fff;
+  text-align: center;
+
+} */
+
+.ribbon-text {
+  font-family: "Great Vibes", cursive;
+  font-size: 3em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 0.2em;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hiệu ứng cho từng chữ */
+.ribbon-text span {
+  /* display: inline-block;
+  position: relative; */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: calc(0.1s * var(--i)); /* Tạo độ trễ cho từng chữ */
+}
+
+/* Hiệu ứng chuyển động từng chữ */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Thêm ruy băng phía sau chữ */
+.ribbon-text span::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(45deg, #ffd700, #ff6ec4); /* Màu ruy băng */
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0.8;
+}
